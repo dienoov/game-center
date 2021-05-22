@@ -10,6 +10,7 @@ html {
 
 body {
     font-family: Poppins, sans-serif;
+    background-color: var(--game-black);
 }
 
 nav.bg-dark {
@@ -40,6 +41,20 @@ nav .nav-link:hover {
     background-color: var(--game-dark-green);
     padding-right: 2rem;
     padding-left: 2rem;
+}
+
+#hero .carousel-inner {
+    position: relative;
+}
+
+#hero .carousel-inner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, var(--game-black), transparent);
+    z-index: 1;
 }
 
 #hero .carousel-item img {
@@ -208,4 +223,63 @@ nav .nav-link:hover {
     #hero ol li {
         display: none;
     }
+}
+
+.pt-6, .py-6 {
+    padding-top: 5rem;
+}
+
+.pb-6, .py-6 {
+    padding-bottom: 5rem;
+}
+
+#best {
+    background-image: url("../img/gta.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    z-index: 1;
+}
+
+#best::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    background-image: linear-gradient(to bottom, var(--game-black) 10%, rgba(17, 22, 28, .9), var(--game-black) 90%);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.title {
+    position: relative;
+}
+
+.title::before {
+    content: "";
+    position: absolute;
+    width: .3rem;
+    height: 100%;
+    background-color: var(--game-bright-green);
+    left: -2.5rem;
+}
+
+.title h2 {
+    font-weight: bold;
+}
+
+.title h3 {
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 1rem;
+    opacity: .7;
+    letter-spacing: .2rem;
+}
+
+#best .img-cover {
+    width: 20rem;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
 }
