@@ -51,10 +51,10 @@ nav .nav-link:hover {
 
 #hero .carousel-caption {
     height: 100vh;
-    margin-left: auto;
-    margin-right: auto;
     width: 100%;
     max-width: 1140px;
+    left: 50%;
+    transform: translate(-50%);
     flex-wrap: wrap;
     padding-bottom: 6rem;
 }
@@ -179,4 +179,33 @@ nav .nav-link:hover {
 #hero ol li.active img, #hero ol li:hover img {
     height: 15rem;
     opacity: .5;
+}
+
+@media screen and (max-width: 768px) {
+    #hero .carousel-caption {
+        max-width: 720px;
+    }
+
+    #hero .carousel-caption p {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #hero h2 {
+        font-size: 2rem;
+    }
+
+    #hero .carousel-caption {
+        padding-top: 6rem;
+        padding-bottom: 0;
+    }
+
+    #hero ul.genre {
+        justify-content: center;
+    }
+
+    #hero ol li {
+        display: none;
+    }
 }
