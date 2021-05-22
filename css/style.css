@@ -310,3 +310,30 @@ nav .nav-link:hover {
 .text-bright-green {
     color: var(--game-bright-green);
 }
+
+#browse .row {
+    background-image: linear-gradient(to bottom, var(--game-bright-green), var(--game-dark-green));
+}
+
+#browse .row .text-muted {
+    color: rgba(255, 255, 255, .7) !important;
+}
+
+#browse .img-browse {
+    width: 20rem;
+    height: 100%;
+    margin: -2.5rem auto;
+    object-fit: cover;
+    display: block;
+    border: .5rem solid var(--game-black);
+}
+
+#browse .btn-dark-green {
+    border: none;
+}
+
+@media screen and (max-width: 768px) {
+    #browse .img-browse {
+        width: 16rem;
+    }
+}
